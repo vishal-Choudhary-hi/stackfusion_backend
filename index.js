@@ -19,8 +19,7 @@ app.use(
     credentials: true,
   })
 );
-const connection =
-  "mongodb+srv://vishalchoudhary:vishalchoudhary123@cluster0.f4pbddv.mongodb.net/?retryWrites=true&w=majority";
+const connection = process.env.CONNECTION_URL;
 const port = process.env.PORT || 5000;
 mongoose
   .connect(connection)
